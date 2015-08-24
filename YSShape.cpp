@@ -206,7 +206,6 @@ void YSShape::SetDepth(double z)
 void YSShape::SetTexture(const QImage &image)
 {
     // associate texture to shape 
-    qDebug() << Q_FUNC_INFO << mTexture;
     if (mTexture != NULL)
         delete mTexture; 
     mTexture = new QOpenGLTexture(image); 

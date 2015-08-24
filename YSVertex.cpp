@@ -1,6 +1,9 @@
 #include <QDebug>
 #include "YSVertex.h"
 
+const int YSVertex::PosStart; 
+const int YSVertex::TexStart; 
+
 //=====================================================================================
 YSVertex::YSVertex(QObject *parent) : QObject(parent)
 {

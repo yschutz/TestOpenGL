@@ -32,11 +32,12 @@ void YSLaboratoryView::initializeGL()
     }
     }
     
-    for (int index = 0; index < mCollision->FSParticles().size(); index++) {
-        YSShape * shape = mCollision->FSParticles().at(index);
-        Scene()->AddShape(shape);
-    }
+//    for (int index = 0; index < mCollision->FSParticles().size(); index++) {
+//        YSShape * shape = mCollision->FSParticles().at(index);
+//        Scene()->AddShape(shape);
+//    }
     
+    Scene()->AddShape(new YSSphere(0.1, 20, 0.0, this));
     Scene()->CreateShapes();
     context()->functions()->glViewport(0, 0, width(), height());
     

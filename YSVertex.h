@@ -1,7 +1,7 @@
 #ifndef YSVERTEX_H
 #define YSVERTEX_H
 
-#include <OpenGL.h>
+#include <OpenGL/gl.h>
 #include <QObject>
 class YSVertex : public QObject
 {
@@ -36,8 +36,8 @@ public:
     qreal V() const { return mV; }
 
 private:
-    qreal mX, mY, mZ; // 3D coordinates
-    qreal mU, mV;     // Texture coordinates
+    float mX, mY, mZ; // 3D coordinates
+    float mU, mV;     // Texture coordinates
 };
 
 #endif // YSVERTEX_H

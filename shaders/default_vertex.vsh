@@ -3,8 +3,8 @@ in vec3 PosCoord;
 in vec2 TexCoord;
 
 //out vec3 fragColor;
-out vec2 fragtexCoord;
-out vec3 fragposCoord;
+out vec2 fragTexCoord;
+out vec3 fragPosCoord;
 
 uniform mat4 all;
 
@@ -17,7 +17,7 @@ void main(void)
 {
     gl_Position =  all * vec4(PosCoord.xyz, 1.);
 
-    fragposCoord = gl_Position.xyz;
-    fragtexCoord = TexCoord;
+    fragPosCoord = gl_Position.xyz;
+    fragTexCoord = TexCoord;
 }
 

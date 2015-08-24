@@ -16,5 +16,6 @@ int main(int argc, char *argv[])
 
     YSLaboratoryView lab;
     lab.show();
+
     return app.exec();
 }

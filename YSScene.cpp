@@ -34,7 +34,6 @@ void YSScene::CreateShapes()
         foreach (YSShape *shape, mShapeList) {
             shape->SetDefaultShaders();
             shape->Create();
-            qDebug() << Q_FUNC_INFO << shape->objectName() << "add texture here";
         }
     }   
 }
@@ -52,7 +51,9 @@ void YSScene::Draw()
     Context()->functions()->glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     foreach (YSShape *shape, mShapeList) {
-        shape->SetTexture(QImage(shape->TextureImageName()));
+        qDebug() << Q_FUNC_INFO << shape->objectName();
+        if (shape->IsTexture())
+            shape->SetTexture(QImage(shape->TextureImageName()));
         shape->Bind();
         QMatrix4x4 all = mProjection * mView * shape->Model();   
         shape->Shaders()->setUniformValueArray("all", &all, 1);

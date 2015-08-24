@@ -45,6 +45,7 @@ public:
     void                     SetTexture(const QImage &image);
     void                     SetTextureImageName(QString name) { mTextureImageName = name; }
     QOpenGLShaderProgram     *Shaders() const { return mShaderProgram; }
+    bool                     IsTexture() const { if (mTexture) return true; else return false; }
     QString                  TextureImageName() const { return mTextureImageName; }
     void                     Translate(qreal x, qreal y, qreal z) { mModel.translate(x, y, z); }
     YSVertex*                Vertex(int index);
