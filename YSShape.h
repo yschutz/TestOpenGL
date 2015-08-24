@@ -4,7 +4,6 @@
 #include <qmath.h>
 #include <QMatrix4x4>
 #include <QObject>
-#include <OpenGL.h>
 #include <QOpenGLBuffer>
 #include <QOpenGLVertexArrayObject>
 #include <QVector>

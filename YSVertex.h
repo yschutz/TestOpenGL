@@ -1,7 +1,6 @@
 #ifndef YSVERTEX_H
 #define YSVERTEX_H
 
-#include <OpenGL.h>
 #include <QObject>
 class YSVertex
 {
