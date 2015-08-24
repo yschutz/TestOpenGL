@@ -5,7 +5,7 @@
 #include "YSParticle.h"
 
 //=====================================================================================
-YSParticle::YSParticle(PARTICLETYPE type, QObject *parent) : YSSphere(),
+YSParticle::YSParticle(PARTICLETYPE type, QObject *parent) : YSSphere(parent),
     mPosition(0.0, 0.0, 0.0), mType(type), mVelocity(0.0, 0.0, 0.0)
 {
     setParent(parent);

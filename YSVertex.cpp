@@ -1,17 +1,17 @@
 #include <QDebug>
 #include "YSVertex.h"
 
-const int YSVertex::PosStart; 
-const int YSVertex::TexStart; 
+const int YSVertex::PosStart;
+const int YSVertex::TexStart;
 
 //=====================================================================================
-YSVertex::YSVertex(QObject *parent) : QObject(parent)
+YSVertex::YSVertex()
 {
     SetAll(0.0, 0.0, 0.0, 0.0, 0.0);
 }
 
 //=====================================================================================
-YSVertex::YSVertex(double x, double y, double z, double u, double v, QObject *parent) : QObject(parent)
+YSVertex::YSVertex(double x, double y, double z, double u, double v)
 {
     SetAll(x, y, z, u, v);
 }

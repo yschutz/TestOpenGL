@@ -2,10 +2,9 @@
 #include "YSSphere.h"
 #include "YSVertex.h"
 //=====================================================================================
-YSSphere::YSSphere() : YSShape("Sphere"), mRadius(0.0), mSeg(0)
+YSSphere::YSSphere(QObject *parent) : YSShape("Sphere", 0, parent), mRadius(0.0), mSeg(0)
 {
     // default ctor
-    qDebug() << Q_FUNC_INFO << mMode;
 }
 
 //=====================================================================================

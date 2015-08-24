@@ -105,6 +105,8 @@ void YSShape::Create()
         qDebug() << Q_FUNC_INFO << "no vertices defined for shape" << objectName(); 
         exit(1); 
     }
+
+    qDebug() << Q_FUNC_INFO << sizeof(YSVertex) << 5 * sizeof(GLfloat) << 5 * sizeof(GL_FLOAT);
     SetDefaultShaders();
     mVertexBuffer.create();
     mVertexBuffer.bind();
@@ -128,11 +130,11 @@ void YSShape::Create()
 
     // position coordinates: first 3 32 bits data members of YSVertex (see also :/shaders/default_vertex.vsh)
     Shaders()->enableAttributeArray("PosCoord");
-    Shaders()->setAttributeBuffer("PosCoord", GL_FLOAT, YSVertex::PosStart, 3, sizeof(YSVertex));
+    Shaders()->setAttributeBuffer("PosCoord", GL_FLOAT, 0, 3, sizeof(YSVertex));
     
     // texture coordinates: Next 2 32 bits data members of YSVertex (see also :/shaders/default_vertex.vsh)
     Shaders()->enableAttributeArray("TexCoord");
-    Shaders()->setAttributeBuffer("TexCoord", GL_FLOAT, YSVertex::TexStart * sizeof(GL_FLOAT), 2, sizeof(YSVertex));
+    Shaders()->setAttributeBuffer("TexCoord", GL_FLOAT, 3 * sizeof(GL_FLOAT), 2, sizeof(YSVertex));
 
     mVAO.release();
     qDebug() << Q_FUNC_INFO << "Shape has been created";

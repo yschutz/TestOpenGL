@@ -6,7 +6,7 @@
 class YSSphere : public YSShape
 {
 public:
-    YSSphere();
+    YSSphere(QObject *parent);
     YSSphere(double radius, int seg, double degrees = 0.0, QObject *parent = 0);
     ~YSSphere(){;}
 

@@ -51,7 +51,6 @@ void YSScene::Draw()
     Context()->functions()->glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     foreach (YSShape *shape, mShapeList) {
-        qDebug() << Q_FUNC_INFO << shape->objectName();
         if (shape->IsTexture())
             shape->SetTexture(QImage(shape->TextureImageName()));
         shape->Bind();
